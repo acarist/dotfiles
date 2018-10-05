@@ -60,6 +60,7 @@ call denite#custom#map('insert', '<C-v>', '<denite:do_action:vsplitswitch>', 'no
 
 nnoremap <leader>o <c-w><Bar><c-w>_<cr>
 nnoremap <leader>= <c-w>=
+nnoremap <leader>vv :vsplit<cr>
 
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -85,3 +86,11 @@ nnoremap <Up>    :resize +2<CR>
 nnoremap <Down>  :resize -2<CR>
 nnoremap <Left>  :vertical resize +2<CR>
 nnoremap <Right> :vertical resize -2<CR>
+inoremap <Up>    <Nop>
+inoremap <Down>  <Nop>
+inoremap <Left>  <Nop>
+inoremap <Right> <Nop>
+vnoremap <Up>    <Nop>
+vnoremap <Down>  <Nop>
+vnoremap <Left>  <Nop>
+vnoremap <Right> <Nop>

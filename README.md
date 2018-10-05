@@ -60,6 +60,7 @@ Notable custom key bindings;
       (ctags) into fuzzy search UI.
 * Other
     * `<leader>V` selects just pasted text.
+    * `<leader>vv` vertical split.
     * Arrow keys to resize active window.
 * Programming support bindings. I like [Tim Pope](https://github.com/tpope)
   style shortcuts (ones derived from default vim bindings);
