@@ -8,8 +8,6 @@ set --export PATH $HOME/.cargo/bin $PATH
 set --export PATH $GOPATH/bin $PATH
 set --export PATH /usr/local/opt/node@6/bin $PATH
 
-# set --export PATH $HOME/.local/bin $PATH
-# set --export PATH $HOME/bin $PATH
 
 set --export LANG "en_US.UTF-8"
 set --export LC_COLLATE "en_US.UTF-8"
@@ -36,3 +34,11 @@ if test -d ~/.config/fish/functions/rust.fish
 end
 
 # status --is-interactive; and source (nodenv init -|psub)
+set -g fish_user_paths "/usr/local/opt/libpq/bin" $fish_user_paths
+
+# fisher for package management
+if not functions -q fisher
+    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+    fish -c fisher
+end
