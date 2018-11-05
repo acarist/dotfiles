@@ -158,3 +158,20 @@ let g:deoplete#keyword_patterns = {}
 let g:deoplete#keyword_patterns.clojure = '[\w!$%&*+/:<=>?@\^_~\-\.#]*'
 
 source ~/.config/nvim/keybindings.vim
+
+set laststatus=2
+set statusline=
+set statusline+=%w
+set statusline+=%q
+set statusline+=\ »\ %F%m\ «
+set statusline+=%=
+set statusline+=[%{fugitive#head(6)}]
+set statusline+=%{(&paste==0?'':'[P]')}
+set statusline+=[%H
+set statusline+=%Y
+set statusline+=%R]
+set statusline+=(%l
+set statusline+=/
+set statusline+=%L)
+set statusline+=%%%p
+set statusline+=%#ErrorMsg#%{neomake#statusline#LoclistStatus()}
