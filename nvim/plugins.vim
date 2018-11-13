@@ -70,5 +70,7 @@ Plug 'zekzekus/vim-cljfmt', {'for': 'clojure'}
 
 " misc
 Plug 'diepm/vim-rest-console', {'for': 'rest'}
+" for dash
+Plug 'rizzatti/dash.vim'
 
 call plug#end()
