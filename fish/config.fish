@@ -7,7 +7,7 @@ set --export PATH /usr/local/opt/go/libexec/bin $PATH
 set --export PATH $HOME/.cargo/bin $PATH
 set --export PATH $GOPATH/bin $PATH
 set --export PATH /usr/local/opt/node@6/bin $PATH
-
+set --export PATH $HOME/gcloud/google-cloud-sdk/bin $PATH
 
 set --export LANG "en_US.UTF-8"
 set --export LC_COLLATE "en_US.UTF-8"
@@ -44,3 +44,6 @@ if not functions -q fisher
 end
 
 alias cat='bat'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/private/tmp/gcloud/google-cloud-sdk/path.fish.inc' ]; . '/private/tmp/gcloud/google-cloud-sdk/path.fish.inc'; end

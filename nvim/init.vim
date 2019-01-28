@@ -55,7 +55,8 @@ set undofile
 set undodir=~/.nvimtmp
 
 set termguicolors
-colorscheme nord
+set background=dark
+colorscheme material 
 highlight clear VertSplit
 
 augroup general_au
