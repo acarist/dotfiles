@@ -1,4 +1,4 @@
-set --export GOROOT /usr/local/opt/go/libexec
+set --export GOROOT /usr/lib/go/
 set --export GOPATH $HOME/go
 set --export NVM_DIR $HOME/.nvm
 # PATH modifications. last item has the highest priority
@@ -6,6 +6,7 @@ set --export PATH /usr/local/bin $PATH
 set --export PATH /usr/local/opt/go/libexec/bin $PATH
 set --export PATH $HOME/.cargo/bin $PATH
 set --export PATH $GOPATH/bin $PATH
+set --export PATH $GOROOT/bin $PATH
 set --export PATH /usr/local/opt/node@6/bin $PATH
 set --export PATH $HOME/gcloud/google-cloud-sdk/bin $PATH
 
@@ -42,6 +43,9 @@ if not functions -q fisher
     curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
     fish -c fisher
 end
+set -x NPM_PACKAGES $HOME/.npm-packages
+set --export PATH NPM_PACKAGES/bin $PATH
+set --export MANPATH $NPM_PACKAGES/share/man (manpath)
 
 alias cat='bat'
 

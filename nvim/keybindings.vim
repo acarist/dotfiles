@@ -7,7 +7,7 @@ nnoremap j gj
 nnoremap k gk
 
 " files
-nnoremap <silent><leader>ff :<c-u>Denite file_rec buffer junkfile -winheight=`30*winheight(0)/100`<cr>
+nnoremap <silent><leader>ff :<c-u>FZF<cr>
 nnoremap <leader>ft <ESC>:TagbarToggle<cr>
 nnoremap <leader>fs <ESC>:w<cr>
 " to remove white space from a file.
@@ -82,15 +82,3 @@ augroup keybindings_au
 augroup END
 
 " slightly more useful arrow keys
-nnoremap <Up>    :resize +2<CR>
-nnoremap <Down>  :resize -2<CR>
-nnoremap <Left>  :vertical resize +2<CR>
-nnoremap <Right> :vertical resize -2<CR>
-inoremap <Up>    <Nop>
-inoremap <Down>  <Nop>
-inoremap <Left>  <Nop>
-inoremap <Right> <Nop>
-vnoremap <Up>    <Nop>
-vnoremap <Down>  <Nop>
-vnoremap <Left>  <Nop>
-vnoremap <Right> <Nop>
