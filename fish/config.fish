@@ -45,7 +45,7 @@ if not functions -q fisher
 end
 set -x NPM_PACKAGES $HOME/.npm-packages
 set --export PATH NPM_PACKAGES/bin $PATH
-set --export MANPATH $NPM_PACKAGES/share/man (manpath)
+#set --export MANPATH $NPM_PACKAGES/share/man (manpath)
 
 alias cat='bat'
 
